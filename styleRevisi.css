@@ -1,0 +1,325 @@
+html{
+    scroll-behavior: smooth;
+}
+body, html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    background: linear-gradient(180deg, #003399, black) no-repeat;
+    background-size: 100% 6100px;
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+}
+b{
+    color: #FFCC66;
+}
+h1, h2, h3{
+    font-family: 'Sora', sans-serif;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+h1{
+    font-size: 72px;
+}
+h2{
+    font-size: 48px;
+    color: #FFCC66;
+}
+section{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+p{
+    letter-spacing: 2px;
+    word-spacing: 1px;
+    font-size: 16px;
+}
+ul li{
+    list-style-type: disc;
+}
+
+/*general divs*/
+p.kecil{
+    font-weight: 300;
+    font-style: italic;
+    margin-top: -20px;
+    opacity: .7;
+}
+
+/*reveal*/
+.reveal{
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: 500ms ease-out;
+}
+
+.reveal.active{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+/*nav*/
+.nav{
+    right: 0;
+    top: 0;
+    position: fixed;
+}
+.nav ul li{
+    display: inline-block;
+    padding-right: 20px;
+    padding-top: 30px;
+}
+.nav ul li a{
+    text-decoration: none;
+    font-weight: 700;
+    color: #ffffff;
+}
+a.navPorto{
+    color: #FFCC66;
+}
+
+.nav ul li a:hover{
+    color: #ffffff;
+}
+
+.nav ul li a:active{
+    color: #FFCC66;
+}
+
+a.navPorto:hover{
+    color: #FFCC66;
+}
+
+/*Home*/
+.home{
+    background-image: url(homepageRevisi-04.png);
+    background-size: cover;
+    background-position: top;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.homeContent{
+    margin-left: 70px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.home p{
+    color: #FFCC66;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+.home h1{
+    margin-top: -20px;
+    margin-bottom: -12px;
+}
+.home a h3{
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    font-size: 20px;
+    bottom: 20%;
+    left: 35%;
+    animation: naikTurun 2000ms  infinite;
+}
+img.ikanKecil{
+    position: absolute;
+    width: 300px;
+    right: 10%;
+    animation: naikTurunIkan 2000ms infinite;
+}
+
+/*animasi home h3*/
+@keyframes naikTurun{
+    0%{
+        transform: translateY(5px);
+    }
+    50%{
+        transform: translateY(-5px);
+    }
+    100%{
+        transform: translateY(5px);
+    }
+}
+
+@keyframes naikTurunIkan{
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+
+/*about*/
+.about img{
+    position: absolute;
+    bottom: -100px;
+    right: 40px;
+    width: 50%;
+}
+
+/*hiu*/
+.containerHiu{
+    position: relative;
+    bottom: 150px;
+}
+img#hiu{
+    height: 300px;
+    position: absolute;
+    animation: gerakKiri 25000ms linear infinite;
+}
+
+/*animasi hiu*/
+@keyframes gerakKiri{
+    0%{
+        right: 0px;
+    }
+    100%{
+        right: 1500px;
+    }
+}
+
+
+
+/*sertif*/
+.certificate a{
+    color: white;
+}
+/*porto*/
+.portfolio{
+    padding-top: 40px;
+    padding-bottom: 200px;
+    scroll-snap-align: none;
+    scroll-snap-stop: none;
+}
+.portfolio .row, .portfolio .row .col{
+    max-height: 100%;
+}
+.portfolio img{
+    width: 100%;
+    margin-bottom: 30px;
+    border: 3px solid #FFCC66;
+}
+.portfolio .col{
+    display: flex;
+    flex-direction: column;
+}
+
+/*bubble*/
+img.bubbleGede{
+    position: fixed;
+    bottom: 0;
+}
+
+#bubble1{
+    left: 0%;
+    width: 100px;
+    animation: bubbleGoyang 5000ms infinite;
+}
+
+#bubble2{
+    left: 12.5%;
+    width: 30px;
+    animation: bubbleGoyang 2000ms infinite;
+}
+
+#bubble3{
+    left: 25%;
+    width: 70px;
+    animation: bubbleGoyang 3400ms infinite;
+}
+
+#bubble4{
+    left: 37.5%;
+    width: 20px;
+    animation: bubbleGoyang 1200ms infinite;
+}
+
+#bubble5{
+    left: 50%;
+    width: 90px;
+    animation: bubbleGoyang 4000ms infinite;
+}
+
+#bubble6{
+    left: 62.5%;
+    width: 50px;
+    animation: bubbleGoyang 2500ms infinite;
+}
+
+#bubble7{
+    left: 75%;
+    width: 20px;
+    animation: bubbleGoyang 2000ms infinite;
+}
+
+#bubble8{
+    left: 87.5%;
+    width: 60px;
+    animation: bubbleGoyang 3000ms infinite;
+}
+
+/*animation bubble*/
+@keyframes bubbleGoyang{
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-500px);
+        opacity: 0;
+    }
+}
+
+/*footer*/
+footer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+    align-items: center;
+    align-items: center;
+    padding: 30px;
+    background-color: black;
+}
+footer p.atas{
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+.contactLogo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.contactLogo img{
+    width: 40px;
+    margin: 0px 10px;
+    transition-duration: 250ms;
+}
+
+.contactLogo img:hover{
+    transform: scale(110%);
+}
+
+img.jangkar{
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+    width: 200px;
+}
